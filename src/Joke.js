@@ -1,11 +1,15 @@
-import { useMemo, useEffect, useState } from "react"
+import {useEffect, useState } from "react"
 
 export default function Joke()
 {
-    let jokeStatus = 1
+    let jokeStatus = 0
     const randomJokeIndex = () => (Math.ceil(Math.random() * 28))
     let index = randomJokeIndex()
-    
+
+    let indexList = []
+    indexList.push(index)
+    console.log(indexList)
+
     const display = document.getElementById("display")
     const button = document.getElementById("button")
     const tellJoke = () => {
